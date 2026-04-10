@@ -476,8 +476,8 @@
       { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
       { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 }
     ]
-  }
-]
+  },
+
 
   {
     "group": "WHERE Clause",
