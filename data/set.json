@@ -1,0 +1,105 @@
+[
+  { "group": "SET Operators", "question": "1. Display all department numbers from both EMP and DEPT tables using UNION.", "query": "SELECT DEPTNO FROM SCOTT.EMP UNION SELECT DEPTNO FROM SCOTT.DEPT;", "output_table": [
+      { "DEPTNO": 10 }, { "DEPTNO": 20 }, { "DEPTNO": 30 }, { "DEPTNO": 40 }
+  ] },
+
+  { "group": "SET Operators", "question": "2. Display all department numbers FROM EMP and DEPT including duplicates using UNION ALL.", "query": "SELECT DEPTNO FROM SCOTT.EMP UNION ALL SELECT DEPTNO FROM SCOTT.DEPT;", "output_table": [
+      { "DEPTNO": 20 }, { "DEPTNO": 30 }, { "DEPTNO": 30 }, { "DEPTNO": 20 }, { "DEPTNO": 30 }, { "DEPTNO": 30 },
+      { "DEPTNO": 30 }, { "DEPTNO": 10 }, { "DEPTNO": 20 }, { "DEPTNO": 30 }, { "DEPTNO": 10 }, { "DEPTNO": 30 },
+      { "DEPTNO": 20 }, { "DEPTNO": 10 }, { "DEPTNO": 10 }, { "DEPTNO": 20 }, { "DEPTNO": 30 }, { "DEPTNO": 40 }
+  ] },
+
+  { "group": "SET Operators", "question": "3. Display department numbers that are present in both EMP and DEPT using INTERSECT.", "query": "SELECT DEPTNO FROM SCOTT.EMP INTERSECT SELECT DEPTNO FROM SCOTT.DEPT;", "output_table": [
+      { "DEPTNO": 10 }, { "DEPTNO": 20 }, { "DEPTNO": 30 }
+  ] },
+
+  { "group": "SET Operators", "question": "4. Display department numbers that are present in EMP but not in DEPT using MINUS.", "query": "SELECT DEPTNO FROM SCOTT.EMP MINUS SELECT DEPTNO FROM SCOTT.DEPT;", "output_table": [{" NO ITEM TO DISPALY": ""}] },
+
+  { "group": "SET Operators", "question": "5. Display department numbers that are present in DEPT but not assigned to any employee.", "query": "SELECT DEPTNO FROM SCOTT.DEPT MINUS SELECT DEPTNO FROM SCOTT.EMP;", "output_table": [
+      { "DEPTNO": 40 }
+  ] },
+
+  { "group": "SET Operators", "question": "6. Display employee names and department names in a single column using UNION.", "query": "SELECT ENAME AS NAME FROM SCOTT.EMP UNION SELECT DNAME AS NAME FROM SCOTT.DEPT;", "output_table": [
+      { "NAME": "ACCOUNTING" }, { "NAME": "ADAMS" }, { "NAME": "ALLEN" }, { "NAME": "BLAKE" }, { "NAME": "CLARK" },
+      { "NAME": "FORD" }, { "NAME": "JAMES" }, { "NAME": "JONES" }, { "NAME": "KING" }, { "NAME": "MARTIN" },
+      { "NAME": "MILLER" }, { "NAME": "OPERATIONS" }, { "NAME": "RESEARCH" }, { "NAME": "SALES" }, { "NAME": "SCOTT" },
+      { "NAME": "SMITH" }, { "NAME": "TURNER" }, { "NAME": "WARD" }
+  ] },
+
+  { "group": "SET Operators", "question": "7. Display all employee names and department names, including duplicates.", "query": "SELECT ENAME AS NAME FROM SCOTT.EMP UNION ALL SELECT DNAME AS NAME FROM SCOTT.DEPT;", "output_table": [
+      { "NAME": "SMITH" }, { "NAME": "ALLEN" }, { "NAME": "WARD" }, { "NAME": "JONES" }, { "NAME": "MARTIN" }, { "NAME": "BLAKE" },
+      { "NAME": "CLARK" }, { "NAME": "SCOTT" }, { "NAME": "KING" }, { "NAME": "TURNER" }, { "NAME": "ADAMS" }, { "NAME": "JAMES" },
+      { "NAME": "FORD" }, { "NAME": "MILLER" }, { "NAME": "ACCOUNTING" }, { "NAME": "RESEARCH" }, { "NAME": "SALES" }, { "NAME": "OPERATIONS" }
+  ] },
+
+  { "group": "SET Operators", "question": "8. Display jobs that exist in EMP table and also exist as department names in DEPT table (use INTERSECT).", "query": "SELECT JOB FROM SCOTT.EMP INTERSECT SELECT DNAME FROM SCOTT.DEPT;", "output_table": [{" NO ITEM TO DISPALY": ""}] },
+
+  { "group": "SET Operators", "question": "9. Display employee names that are not department names.", "query": "SELECT ENAME FROM SCOTT.EMP MINUS SELECT DNAME FROM SCOTT.DEPT;", "output_table": [
+      { "ENAME": "SMITH" }, { "ENAME": "ALLEN" }, { "ENAME": "WARD" }, { "ENAME": "JONES" }, { "ENAME": "MARTIN" }, { "ENAME": "BLAKE" },
+      { "ENAME": "CLARK" }, { "ENAME": "SCOTT" }, { "ENAME": "KING" }, { "ENAME": "TURNER" }, { "ENAME": "ADAMS" }, { "ENAME": "JAMES" },
+      { "ENAME": "FORD" }, { "ENAME": "MILLER" }
+  ] },
+
+  { "group": "SET Operators", "question": "10. Display department locations that are not used by any employee.", "query": "SELECT LOC FROM SCOTT.DEPT MINUS SELECT D.LOC FROM SCOTT.DEPT D JOIN SCOTT.EMP E ON D.DEPTNO = E.DEPTNO;", "output_table": [
+      { "LOC": "BOSTON" }
+  ] },
+
+  { "group": "SET Operators", "question": "11. Display employee names from department 10 and department 20 using UNION.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO = 10 UNION SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO = 20;", "output_table": [
+      { "ENAME": "ADAMS" }, { "ENAME": "CLARK" }, { "ENAME": "FORD" }, { "ENAME": "JONES" }, { "ENAME": "KING" }, { "ENAME": "MILLER" }, { "ENAME": "SCOTT" }, { "ENAME": "SMITH" }
+  ] },
+
+  { "group": "SET Operators", "question": "12. Display employee names from department 10 and department 20 including duplicates.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO = 10 UNION ALL SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO = 20;", "output_table": [
+      { "ENAME": "CLARK" }, { "ENAME": "KING" }, { "ENAME": "MILLER" }, { "ENAME": "SMITH" }, { "ENAME": "JONES" }, { "ENAME": "SCOTT" }, { "ENAME": "ADAMS" }, { "ENAME": "FORD" }
+  ] },
+
+  { "group": "SET Operators", "question": "13. Display employees who work in departments that exist in DEPT table using INTERSECT.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP INTERSECT SELECT DEPTNO FROM SCOTT.DEPT);", "output_table": [
+      { "ENAME": "SMITH" }, { "ENAME": "ALLEN" }, { "ENAME": "WARD" }, { "ENAME": "JONES" }, { "ENAME": "MARTIN" }, { "ENAME": "BLAKE" },
+      { "ENAME": "CLARK" }, { "ENAME": "SCOTT" }, { "ENAME": "KING" }, { "ENAME": "TURNER" }, { "ENAME": "ADAMS" }, { "ENAME": "JAMES" },
+      { "ENAME": "FORD" }, { "ENAME": "MILLER" }
+  ] },
+
+  { "group": "SET Operators", "question": "14. Display employees whose department does not exist in DEPT table using MINUS.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.EMP MINUS SELECT DEPTNO FROM SCOTT.DEPT);", "output_table": [{" NO ITEM TO DISPALY": ""}] },
+
+  { "group": "SET Operators", "question": "15. Display department numbers that have employees and also exist in DEPT table.", "query": "SELECT DEPTNO FROM SCOTT.DEPT INTERSECT SELECT DEPTNO FROM SCOTT.EMP;", "output_table": [
+      { "DEPTNO": 10 }, { "DEPTNO": 20 }, { "DEPTNO": 30 }
+  ] },
+
+  { "group": "SET Operators", "question": "16. Display all unique job roles FROM EMP and all unique department names from DEPT in one result.", "query": "SELECT JOB AS ROLE FROM SCOTT.EMP UNION SELECT DNAME AS ROLE FROM SCOTT.DEPT;", "output_table": [
+      { "ROLE": "ACCOUNTING" }, { "ROLE": "ANALYST" }, { "ROLE": "CLERK" }, { "ROLE": "MANAGER" }, { "ROLE": "OPERATIONS" },
+      { "ROLE": "PRESIDENT" }, { "ROLE": "RESEARCH" }, { "ROLE": "SALES" }, { "ROLE": "SALESMAN" }
+  ] },
+
+  { "group": "SET Operators", "question": "17. Display common values between employee job and department location.", "query": "SELECT JOB FROM SCOTT.EMP INTERSECT SELECT LOC FROM SCOTT.DEPT;", "output_table": [{" NO ITEM TO DISPALY": ""}] },
+
+  { "group": "SET Operators", "question": "18. Display employee names who are not assigned to any valid department.", "query": "SELECT ENAME FROM SCOTT.EMP MINUS SELECT E.ENAME FROM SCOTT.EMP E JOIN SCOTT.DEPT D ON E.DEPTNO = D.DEPTNO;", "output_table": [{" NO ITEM TO DISPALY": ""}] },
+
+  { "group": "SET Operators", "question": "19. Combine employees earning more than 2000 and employees from department 10 using UNION.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE SAL > 2000 UNION SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO = 10;", "output_table": [
+      { "ENAME": "BLAKE" }, { "ENAME": "CLARK" }, { "ENAME": "FORD" }, { "ENAME": "JONES" }, { "ENAME": "KING" }, { "ENAME": "MILLER" }, { "ENAME": "SCOTT" }
+  ] },
+
+  { "group": "SET Operators", "question": "20. Display employees who work in department 10 but not in department 20 using MINUS.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO = 10 MINUS SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO = 20;", "output_table": [
+      { "ENAME": "CLARK" }, { "ENAME": "KING" }, { "ENAME": "MILLER" }
+  ] },
+
+  { "group": "SET Operators", "question": "21. Display department numbers that exist in both EMP and DEPT, but exclude department 10.", "query": "(SELECT DEPTNO FROM SCOTT.EMP INTERSECT SELECT DEPTNO FROM SCOTT.DEPT) MINUS SELECT 10 AS DEPTNO FROM DUAL;", "output_table": [
+      { "DEPTNO": 20 }, { "DEPTNO": 30 }
+  ] },
+
+  { "group": "SET Operators", "question": "22. Display all employee names and department names in a single result sorted alphabetically.", "query": "SELECT ENAME AS NAME FROM SCOTT.EMP UNION SELECT DNAME AS NAME FROM SCOTT.DEPT ORDER BY 1;", "output_table": [
+      { "NAME": "ACCOUNTING" }, { "NAME": "ADAMS" }, { "NAME": "ALLEN" }, { "NAME": "BLAKE" }, { "NAME": "CLARK" }, { "NAME": "FORD" },
+      { "NAME": "JAMES" }, { "NAME": "JONES" }, { "NAME": "KING" }, { "NAME": "MARTIN" }, { "NAME": "MILLER" }, { "NAME": "OPERATIONS" },
+      { "NAME": "RESEARCH" }, { "NAME": "SALES" }, { "NAME": "SCOTT" }, { "NAME": "SMITH" }, { "NAME": "TURNER" }, { "NAME": "WARD" }
+  ] },
+
+  { "group": "SET Operators", "question": "23. Display department numbers that appear in EMP more than once using UNION ALL.", "query": "SELECT DEPTNO FROM SCOTT.EMP GROUP BY DEPTNO HAVING COUNT(*) > 1 UNION ALL SELECT DEPTNO FROM SCOTT.DEPT WHERE 1 = 0;", "output_table": [
+      { "DEPTNO": 10 }, { "DEPTNO": 20 }, { "DEPTNO": 30 }
+  ] },
+
+  { "group": "SET Operators", "question": "24. Display employees from departments located in NEW YORK and DALLAS using UNION.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.DEPT WHERE LOC = 'NEW YORK') UNION SELECT ENAME FROM SCOTT.EMP WHERE DEPTNO IN (SELECT DEPTNO FROM SCOTT.DEPT WHERE LOC = 'DALLAS');", "output_table": [
+      { "ENAME": "ADAMS" }, { "ENAME": "CLARK" }, { "ENAME": "FORD" }, { "ENAME": "JONES" }, { "ENAME": "KING" }, { "ENAME": "MILLER" }, { "ENAME": "SCOTT" }, { "ENAME": "SMITH" }
+  ] },
+
+  { "group": "SET Operators", "question": "25. Combine results of employees with salary > 3000 and employees with job = 'MANAGER', removing duplicates.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE SAL > 3000 UNION SELECT ENAME FROM SCOTT.EMP WHERE JOB = 'MANAGER';", "output_table": [
+      { "ENAME": "BLAKE" }, { "ENAME": "CLARK" }, { "ENAME": "JONES" }, { "ENAME": "KING" }
+  ] }
+]

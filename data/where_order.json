@@ -1,0 +1,1181 @@
+[
+  {
+    "group": "WHERE Clause",
+    "question": "1. Display employees whose salary is greater than 3000.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE SAL > 3000;",
+    "output_table": [
+      {
+        "EMPNO": 7839,
+        "ENAME": "KING",
+        "JOB": "PRESIDENT",
+        "MGR": null,
+        "HIREDATE": "1981-11-17",
+        "SAL": 5000,
+        "COMM": null,
+        "DEPTNO": 10
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "2. Display employees working in department 10.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE DEPTNO = 10;",
+    "output_table": [
+      {
+        "EMPNO": 7839,
+        "ENAME": "KING",
+        "JOB": "PRESIDENT",
+        "MGR": null,
+        "HIREDATE": "1981-11-17",
+        "SAL": 5000,
+        "COMM": null,
+        "DEPTNO": 10
+      },
+      {
+        "EMPNO": 7782,
+        "ENAME": "CLARK",
+        "JOB": "MANAGER",
+        "MGR": 7839,
+        "HIREDATE": "1981-06-09",
+        "SAL": 2450,
+        "COMM": null,
+        "DEPTNO": 10
+      },
+      {
+        "EMPNO": 7934,
+        "ENAME": "MILLER",
+        "JOB": "CLERK",
+        "MGR": 7782,
+        "HIREDATE": "1982-01-23",
+        "SAL": 1300,
+        "COMM": null,
+        "DEPTNO": 10
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "3. Display employees whose job is 'CLERK'.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE JOB = 'CLERK';",
+    "output_table": [
+      {
+        "EMPNO": 7369,
+        "ENAME": "SMITH",
+        "JOB": "CLERK",
+        "MGR": 7902,
+        "HIREDATE": "1980-12-17",
+        "SAL": 800,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7876,
+        "ENAME": "ADAMS",
+        "JOB": "CLERK",
+        "MGR": 7788,
+        "HIREDATE": "1987-05-23",
+        "SAL": 1100,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7900,
+        "ENAME": "JAMES",
+        "JOB": "CLERK",
+        "MGR": 7698,
+        "HIREDATE": "1981-12-03",
+        "SAL": 950,
+        "COMM": null,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7934,
+        "ENAME": "MILLER",
+        "JOB": "CLERK",
+        "MGR": 7782,
+        "HIREDATE": "1982-01-23",
+        "SAL": 1300,
+        "COMM": null,
+        "DEPTNO": 10
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "4. Display employees hired after 01-JAN-81.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE HIREDATE > '01-JAN-81';",
+    "output_table": [
+      {
+        "EMPNO": 7839,
+        "ENAME": "KING",
+        "JOB": "PRESIDENT",
+        "MGR": null,
+        "HIREDATE": "1981-11-17",
+        "SAL": 5000,
+        "COMM": null,
+        "DEPTNO": 10
+      },
+      {
+        "EMPNO": 7788,
+        "ENAME": "SCOTT",
+        "JOB": "ANALYST",
+        "MGR": 7566,
+        "HIREDATE": "1987-04-19",
+        "SAL": 3000,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7902,
+        "ENAME": "FORD",
+        "JOB": "ANALYST",
+        "MGR": 7566,
+        "HIREDATE": "1981-12-03",
+        "SAL": 3000,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7876,
+        "ENAME": "ADAMS",
+        "JOB": "CLERK",
+        "MGR": 7788,
+        "HIREDATE": "1987-05-23",
+        "SAL": 1100,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7900,
+        "ENAME": "JAMES",
+        "JOB": "CLERK",
+        "MGR": 7698,
+        "HIREDATE": "1981-12-03",
+        "SAL": 950,
+        "COMM": null,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7934,
+        "ENAME": "MILLER",
+        "JOB": "CLERK",
+        "MGR": 7782,
+        "HIREDATE": "1982-01-23",
+        "SAL": 1300,
+        "COMM": null,
+        "DEPTNO": 10
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "6. Display employees whose salary is > 2000 and job is 'MANAGER'.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE SAL > 2000 AND JOB = 'MANAGER';",
+    "output_table": [
+      {
+        "EMPNO": 7698,
+        "ENAME": "BLAKE",
+        "JOB": "MANAGER",
+        "MGR": 7839,
+        "HIREDATE": "1981-05-01",
+        "SAL": 2850,
+        "COMM": null,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7782,
+        "ENAME": "CLARK",
+        "JOB": "MANAGER",
+        "MGR": 7839,
+        "HIREDATE": "1981-06-09",
+        "SAL": 2450,
+        "COMM": null,
+        "DEPTNO": 10
+      },
+      {
+        "EMPNO": 7566,
+        "ENAME": "JONES",
+        "JOB": "MANAGER",
+        "MGR": 7839,
+        "HIREDATE": "1981-04-02",
+        "SAL": 2975,
+        "COMM": null,
+        "DEPTNO": 20
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "7. Display employees working in department 10 or 20.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE DEPTNO = 10 OR DEPTNO = 20;",
+    "output_table": [
+      {
+        "EMPNO": 7839,
+        "ENAME": "KING",
+        "JOB": "PRESIDENT",
+        "MGR": null,
+        "HIREDATE": "1981-11-17",
+        "SAL": 5000,
+        "COMM": null,
+        "DEPTNO": 10
+      },
+      {
+        "EMPNO": 7782,
+        "ENAME": "CLARK",
+        "JOB": "MANAGER",
+        "MGR": 7839,
+        "HIREDATE": "1981-06-09",
+        "SAL": 2450,
+        "COMM": null,
+        "DEPTNO": 10
+      },
+      {
+        "EMPNO": 7934,
+        "ENAME": "MILLER",
+        "JOB": "CLERK",
+        "MGR": 7782,
+        "HIREDATE": "1982-01-23",
+        "SAL": 1300,
+        "COMM": null,
+        "DEPTNO": 10
+      },
+      {
+        "EMPNO": 7566,
+        "ENAME": "JONES",
+        "JOB": "MANAGER",
+        "MGR": 7839,
+        "HIREDATE": "1981-04-02",
+        "SAL": 2975,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7788,
+        "ENAME": "SCOTT",
+        "JOB": "ANALYST",
+        "MGR": 7566,
+        "HIREDATE": "1987-04-19",
+        "SAL": 3000,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7902,
+        "ENAME": "FORD",
+        "JOB": "ANALYST",
+        "MGR": 7566,
+        "HIREDATE": "1981-12-03",
+        "SAL": 3000,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7369,
+        "ENAME": "SMITH",
+        "JOB": "CLERK",
+        "MGR": 7902,
+        "HIREDATE": "1980-12-17",
+        "SAL": 800,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7876,
+        "ENAME": "ADAMS",
+        "JOB": "CLERK",
+        "MGR": 7788,
+        "HIREDATE": "1987-05-23",
+        "SAL": 1100,
+        "COMM": null,
+        "DEPTNO": 20
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "8. Display employees whose job is 'SALESMAN' and salary > 1500.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE SAL > 1500 AND JOB = 'SALESMAN';",
+    "output_table": [
+      {
+        "EMPNO": 7499,
+        "ENAME": "ALLEN",
+        "JOB": "SALESMAN",
+        "MGR": 7698,
+        "HIREDATE": "1981-02-20",
+        "SAL": 1600,
+        "COMM": 300,
+        "DEPTNO": 30
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "9. Display employees who are either CLERK or ANALYST.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE JOB = 'ANALYST' OR JOB = 'CLERK';",
+    "output_table": [
+      {
+        "EMPNO": 7788,
+        "ENAME": "SCOTT",
+        "JOB": "ANALYST",
+        "MGR": 7566,
+        "HIREDATE": "1987-04-19",
+        "SAL": 3000,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7902,
+        "ENAME": "FORD",
+        "JOB": "ANALYST",
+        "MGR": 7566,
+        "HIREDATE": "1981-12-03",
+        "SAL": 3000,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7369,
+        "ENAME": "SMITH",
+        "JOB": "CLERK",
+        "MGR": 7902,
+        "HIREDATE": "1980-12-17",
+        "SAL": 800,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7876,
+        "ENAME": "ADAMS",
+        "JOB": "CLERK",
+        "MGR": 7788,
+        "HIREDATE": "1987-05-23",
+        "SAL": 1100,
+        "COMM": null,
+        "DEPTNO": 20
+      },
+      {
+        "EMPNO": 7900,
+        "ENAME": "JAMES",
+        "JOB": "CLERK",
+        "MGR": 7698,
+        "HIREDATE": "1981-12-03",
+        "SAL": 950,
+        "COMM": null,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7934,
+        "ENAME": "MILLER",
+        "JOB": "CLERK",
+        "MGR": 7782,
+        "HIREDATE": "1982-01-23",
+        "SAL": 1300,
+        "COMM": null,
+        "DEPTNO": 10
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "10. Display employees hired before 1982 and working in department 30.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE HIREDATE < '01-jan-1982' AND DEPTNO = 30;",
+    "output_table": [
+      {
+        "EMPNO": 7698,
+        "ENAME": "BLAKE",
+        "JOB": "MANAGER",
+        "MGR": 7839,
+        "HIREDATE": "1981-05-01",
+        "SAL": 2850,
+        "COMM": null,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7499,
+        "ENAME": "ALLEN",
+        "JOB": "SALESMAN",
+        "MGR": 7698,
+        "HIREDATE": "1981-02-20",
+        "SAL": 1600,
+        "COMM": 300,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7521,
+        "ENAME": "WARD",
+        "JOB": "SALESMAN",
+        "MGR": 7698,
+        "HIREDATE": "1981-02-22",
+        "SAL": 1250,
+        "COMM": 500,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7654,
+        "ENAME": "MARTIN",
+        "JOB": "SALESMAN",
+        "MGR": 7698,
+        "HIREDATE": "1981-09-28",
+        "SAL": 1250,
+        "COMM": 1400,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7844,
+        "ENAME": "TURNER",
+        "JOB": "SALESMAN",
+        "MGR": 7698,
+        "HIREDATE": "1981-09-08",
+        "SAL": 1500,
+        "COMM": 0,
+        "DEPTNO": 30
+      },
+      {
+        "EMPNO": 7900,
+        "ENAME": "JAMES",
+        "JOB": "CLERK",
+        "MGR": 7698,
+        "HIREDATE": "1981-12-03",
+        "SAL": 950,
+        "COMM": null,
+        "DEPTNO": 30
+      }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "11. Display employees working in departments 10, 20, or 30.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE DEPTNO = 10 OR DEPTNO = 20 OR DEPTNO = 30;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "12. Display employees whose job is not MANAGER or CLERK.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE JOB <> 'ANALYST' AND JOB <> 'CLERK';",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "13. Display employees whose department is not 10.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE DEPTNO <> 10;",
+    "output_table": [
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 }
+    ]
+  },
+  
+  {
+    "group": "WHERE Clause",
+    "question": "14. Display employees whose salary is between 1000 and 3000.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE SAL BETWEEN 1000 AND 3000;",
+    "output_table": [
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+  {
+    "group": "WHERE Clause",
+    "question": "15. Display employees hired between 01-JAN-81 and 31-DEC-81.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE HIREDATE BETWEEN '01-JAN-81' AND '31-DEC-81';",
+    "output_table": [
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 }
+    ]
+  },
+  {
+    "group": "ORDER BY Clause",
+    "question": "16. Display all employees ordered by salary in ascending order.",
+    "query": "SELECT * FROM SCOTT.EMP ORDER BY SAL ASC;",
+    "output_table": [
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+  {
+    "group": "ORDER BY Clause",
+    "question": "17. Display all employees ordered by salary in descending order.",
+    "query": "SELECT * FROM SCOTT.EMP ORDER BY SAL DESC;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 }
+    ]
+  },
+  {
+    "group": "ORDER BY Clause",
+    "question": "18. Display employees ordered by hire date.",
+    "query": "SELECT * FROM SCOTT.EMP ORDER BY HIREDATE;",
+    "output_table": [
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 }
+    ]
+  },
+  {
+  "group": "ORDER BY Clause",
+  "question": "19. Display employees ordered by department number and salary.",
+  "query": "SELECT * FROM SCOTT.EMP ORDER BY DEPTNO ASC, SAL ASC;",
+  "output_table": [
+    { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 },
+    { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+    { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+
+    { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+    { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+    { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+    { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+    { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+
+    { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+    { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+    { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+    { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+    { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+    { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 }
+  ]
+},
+  {
+    "group": "ORDER BY Clause",
+    "question": "20. Display employees ordered by job (ascending) and salary (descending).",
+    "query": "SELECT * FROM SCOTT.EMP ORDER BY JOB ASC, SAL DESC;",
+    "output_table": [
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 }
+    ]
+  },
+  {
+    "group": "ORDER BY Clause",
+    "question": "21. Display employee names ordered alphabetically.",
+    "query": "SELECT ENAME FROM SCOTT.EMP ORDER BY ENAME;",
+    "output_table": [
+      { "ENAME": "ADAMS" },
+      { "ENAME": "ALLEN" },
+      { "ENAME": "BLAKE" },
+      { "ENAME": "CLARK" },
+      { "ENAME": "FORD" },
+      { "ENAME": "JAMES" },
+      { "ENAME": "JONES" },
+      { "ENAME": "KING" },
+      { "ENAME": "MARTIN" },
+      { "ENAME": "MILLER" },
+      { "ENAME": "SCOTT" },
+      { "ENAME": "SMITH" },
+      { "ENAME": "TURNER" },
+      { "ENAME": "WARD" }
+    ]
+  },
+  {
+    "group": "ORDER BY Clause",
+    "question": "22. Display employees of department 30 ordered by salary.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE DEPTNO = 30 ORDER BY SAL ASC;",
+    "output_table": [
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 }
+    ]
+  },
+  {
+    "group": "ORDER BY Clause",
+    "question": "23. Display employees ordered by annual salary.",
+    "query": "SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL*12 AS ANNUAL_SAL, COMM, DEPTNO FROM SCOTT.EMP ORDER BY SAL*12 ASC;",
+    "output_table": [
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "ANNUAL_SAL": 9600, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "ANNUAL_SAL": 11400, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "ANNUAL_SAL": 13200, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "ANNUAL_SAL": 15000, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "ANNUAL_SAL": 15000, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "ANNUAL_SAL": 15600, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "ANNUAL_SAL": 18000, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "ANNUAL_SAL": 19200, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "ANNUAL_SAL": 29400, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "ANNUAL_SAL": 34200, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "ANNUAL_SAL": 35700, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "ANNUAL_SAL": 36000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "ANNUAL_SAL": 36000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "ANNUAL_SAL": 60000, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+  {
+    "group": "ORDER BY Clause",
+    "question": "24. Display employees ordered by commission.",
+    "query": "SELECT * FROM SCOTT.EMP ORDER BY COMM ASC;",
+    "output_table": [
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 }
+    ]
+  },
+  {
+    "group": "ORDER BY Clause",
+    "question": "25. Display employees ordered by job and name.",
+    "query": "SELECT * FROM SCOTT.EMP ORDER BY JOB, ENAME;",
+    "output_table": [
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 }
+    ]
+  },
+    {
+    "group": "ALIAS",
+    "question": "26. Display employee name as Employee_Name.",
+    "query": "SELECT ENAME AS EMPLOYEE_NAME, EMPNO, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPLOYEE_NAME": "KING", "EMPNO": 7839, "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPLOYEE_NAME": "BLAKE", "EMPNO": 7698, "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPLOYEE_NAME": "CLARK", "EMPNO": 7782, "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPLOYEE_NAME": "JONES", "EMPNO": 7566, "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPLOYEE_NAME": "SCOTT", "EMPNO": 7788, "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPLOYEE_NAME": "FORD", "EMPNO": 7902, "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPLOYEE_NAME": "SMITH", "EMPNO": 7369, "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPLOYEE_NAME": "ALLEN", "EMPNO": 7499, "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPLOYEE_NAME": "WARD", "EMPNO": 7521, "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPLOYEE_NAME": "MARTIN", "EMPNO": 7654, "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPLOYEE_NAME": "TURNER", "EMPNO": 7844, "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPLOYEE_NAME": "ADAMS", "EMPNO": 7876, "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPLOYEE_NAME": "JAMES", "EMPNO": 7900, "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPLOYEE_NAME": "MILLER", "EMPNO": 7934, "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+  {
+    "group": "ALIAS",
+    "question": "27. Display salary as Monthly_Salary.",
+    "query": "SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL AS MONTHLY_SALARY, COMM, DEPTNO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "MONTHLY_SALARY": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "MONTHLY_SALARY": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "MONTHLY_SALARY": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "MONTHLY_SALARY": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "MONTHLY_SALARY": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "MONTHLY_SALARY": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "MONTHLY_SALARY": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "MONTHLY_SALARY": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "MONTHLY_SALARY": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "MONTHLY_SALARY": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "MONTHLY_SALARY": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "MONTHLY_SALARY": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "MONTHLY_SALARY": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "MONTHLY_SALARY": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "ALIAS",
+    "question": "28. Display employee name and job with aliases.",
+    "query": "SELECT EMPNO, ENAME AS EMPLOYEE_NAME, JOB AS EMPLOYEE_JOB, MGR, HIREDATE, SAL, COMM, DEPTNO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPNO": 7839, "EMPLOYEE_NAME": "KING", "EMPLOYEE_JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "EMPLOYEE_NAME": "BLAKE", "EMPLOYEE_JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "EMPLOYEE_NAME": "CLARK", "EMPLOYEE_JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "EMPLOYEE_NAME": "JONES", "EMPLOYEE_JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "EMPLOYEE_NAME": "SCOTT", "EMPLOYEE_JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "EMPLOYEE_NAME": "FORD", "EMPLOYEE_JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "EMPLOYEE_NAME": "SMITH", "EMPLOYEE_JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "EMPLOYEE_NAME": "ALLEN", "EMPLOYEE_JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "EMPLOYEE_NAME": "WARD", "EMPLOYEE_JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "EMPLOYEE_NAME": "MARTIN", "EMPLOYEE_JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "EMPLOYEE_NAME": "TURNER", "EMPLOYEE_JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "EMPLOYEE_NAME": "ADAMS", "EMPLOYEE_JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "EMPLOYEE_NAME": "JAMES", "EMPLOYEE_JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "EMPLOYEE_NAME": "MILLER", "EMPLOYEE_JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+  {
+    "group": "ALIAS",
+    "question": "29. Display department number as Dept_No.",
+    "query": "SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO AS DEPT_NO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPT_NO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPT_NO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPT_NO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPT_NO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPT_NO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPT_NO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPT_NO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPT_NO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPT_NO": 10 }
+    ]
+  },
+
+  {
+    "group": "ALIAS",
+    "question": "30. Display employee name and salary with meaningful aliases.",
+    "query": "SELECT EMPNO, ENAME AS EMPLOYEE_NAME, JOB, MGR, HIREDATE, SAL AS EMPLOYEE_SAL, COMM, DEPTNO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPNO": 7839, "EMPLOYEE_NAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "EMPLOYEE_SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "EMPLOYEE_NAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "EMPLOYEE_SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "EMPLOYEE_NAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "EMPLOYEE_SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "EMPLOYEE_NAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "EMPLOYEE_SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "EMPLOYEE_NAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "EMPLOYEE_SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "EMPLOYEE_NAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "EMPLOYEE_SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "EMPLOYEE_NAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "EMPLOYEE_SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "EMPLOYEE_NAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "EMPLOYEE_SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "EMPLOYEE_NAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "EMPLOYEE_SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "EMPLOYEE_NAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "EMPLOYEE_SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "EMPLOYEE_NAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "EMPLOYEE_SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "EMPLOYEE_NAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "EMPLOYEE_SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "EMPLOYEE_NAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "EMPLOYEE_SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "EMPLOYEE_NAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "EMPLOYEE_SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "WHERE + ORDER",
+    "question": "33. Display employees of department 30 whose salary > 1500, ordered by salary.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE DEPTNO = 30 AND SAL > 1500 ORDER BY SAL;",
+    "output_table": [
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 }
+    ]
+  },
+
+  {
+    "group": "WHERE + ORDER",
+    "question": "34. Display employees whose commission is NOT NULL, ordered by commission.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NOT NULL ORDER BY COMM;",
+    "output_table": [
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 }
+    ]
+  },
+
+  {
+    "group": "WHERE + ORDER",
+    "question": "35. Display employees whose salary is between 1500 and 3000, ordered by salary.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE SAL BETWEEN 1500 AND 3000 ORDER BY SAL;",
+    "output_table": [
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 }
+    ]
+  },
+  
+  {
+    "group": "ALIAS",
+    "question": "29. Display department number as Dept_No.",
+    "query": "SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO AS DEPT_NO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPT_NO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPT_NO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPT_NO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPT_NO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPT_NO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPT_NO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPT_NO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPT_NO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPT_NO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPT_NO": 10 }
+    ]
+  },
+
+  {
+    "group": "ALIAS",
+    "question": "30. Display employee name and salary with meaningful aliases.",
+    "query": "SELECT EMPNO, ENAME AS EMPLOYEE_NAME, JOB, MGR, HIREDATE, SAL AS EMPLOYEE_SAL, COMM, DEPTNO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPNO": 7839, "EMPLOYEE_NAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "EMPLOYEE_SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "EMPLOYEE_NAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "EMPLOYEE_SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "EMPLOYEE_NAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "EMPLOYEE_SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "EMPLOYEE_NAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "EMPLOYEE_SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "EMPLOYEE_NAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "EMPLOYEE_SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "EMPLOYEE_NAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "EMPLOYEE_SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "EMPLOYEE_NAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "EMPLOYEE_SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "EMPLOYEE_NAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "EMPLOYEE_SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "EMPLOYEE_NAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "EMPLOYEE_SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "EMPLOYEE_NAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "EMPLOYEE_SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "EMPLOYEE_NAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "EMPLOYEE_SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "EMPLOYEE_NAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "EMPLOYEE_SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "EMPLOYEE_NAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "EMPLOYEE_SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "EMPLOYEE_NAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "EMPLOYEE_SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "WHERE + ORDER",
+    "question": "33. Display employees of department 30 whose salary > 1500, ordered by salary.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE DEPTNO = 30 AND SAL > 1500 ORDER BY SAL;",
+    "output_table": [
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 }
+    ]
+  },
+
+  {
+    "group": "WHERE + ORDER",
+    "question": "34. Display employees whose commission is NOT NULL, ordered by commission.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NOT NULL ORDER BY COMM;",
+    "output_table": [
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 }
+    ]
+  },
+
+  {
+    "group": "WHERE + ORDER",
+    "question": "35. Display employees whose salary is between 1500 and 3000, ordered by salary.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE SAL BETWEEN 1500 AND 3000 ORDER BY SAL;",
+    "output_table": [
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 }
+    ]
+  },
+  
+  {
+    "group": "ORDER BY + CALC",
+    "question": "41. Display employee name and annual salary, ordered by annual salary.",
+    "query": "SELECT ENAME, SAL*12 AS ANNUAL_SAL FROM SCOTT.EMP ORDER BY ANNUAL_SAL;",
+    "output_table": [
+      { "ENAME": "SMITH", "ANNUAL_SAL": 9600 },
+      { "ENAME": "JAMES", "ANNUAL_SAL": 11400 },
+      { "ENAME": "ADAMS", "ANNUAL_SAL": 13200 },
+      { "ENAME": "WARD", "ANNUAL_SAL": 15000 },
+      { "ENAME": "MARTIN", "ANNUAL_SAL": 15000 },
+      { "ENAME": "MILLER", "ANNUAL_SAL": 15600 },
+      { "ENAME": "TURNER", "ANNUAL_SAL": 18000 },
+      { "ENAME": "ALLEN", "ANNUAL_SAL": 19200 },
+      { "ENAME": "CLARK", "ANNUAL_SAL": 29400 },
+      { "ENAME": "BLAKE", "ANNUAL_SAL": 34200 },
+      { "ENAME": "JONES", "ANNUAL_SAL": 35700 },
+      { "ENAME": "SCOTT", "ANNUAL_SAL": 36000 },
+      { "ENAME": "FORD", "ANNUAL_SAL": 36000 },
+      { "ENAME": "KING", "ANNUAL_SAL": 60000 }
+    ]
+  },
+
+  {
+    "group": "WHERE",
+    "question": "42. Display employees whose commission is NULL but job is SALESMAN.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NULL AND JOB = 'SALESMAN';",
+    "output_table": [
+    ]
+  },
+
+  {
+    "group": "WHERE",
+    "question": "43. Display employees whose manager is NULL and salary > 4000.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE MGR IS NULL AND SAL > 4000;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "WHERE",
+    "question": "44. Display employees who do not earn commission and work in department 20.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NULL AND DEPTNO = 20;",
+    "output_table": [
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 }
+    ]
+  },
+
+  {
+    "group": "WHERE",
+    "question": "45. Display employees whose commission is NOT NULL and department is 30.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NOT NULL AND DEPTNO = 30;",
+    "output_table": [
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 }
+    ]
+  },
+  
+  {
+    "group": "WHERE",
+    "question": "46. Display employees whose commission is NULL or salary > 3000.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NULL OR SAL > 3000;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "WHERE",
+    "question": "47. Display employees whose commission is NULL and salary > 2000.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NULL AND SAL > 2000;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 }
+    ]
+  },
+
+  {
+    "group": "WHERE",
+    "question": "48. Display employees whose manager is not NULL.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE MGR IS NOT NULL;",
+    "output_table": [
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "WHERE",
+    "question": "49. Display employees who do not have a manager.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE MGR IS NULL;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "WHERE",
+    "question": "50. Display employees who are getting commission.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NOT NULL;",
+    "output_table": [
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 }
+    ]
+  },
+  
+  {
+    "group": "WHERE",
+    "question": "51. Display employees whose commission is NULL.",
+    "query": "SELECT * FROM SCOTT.EMP WHERE COMM IS NULL;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "ALIAS",
+    "question": "52. Display job and salary using aliases.",
+    "query": "SELECT EMPNO, ENAME, JOB AS EMPLOYEE_JOB, MGR, HIREDATE, SAL AS EMPLOYEE_SAL, COMM, DEPTNO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "EMPLOYEE_JOB": "PRESIDENT", "MGR": null, "HIREDATE": "1981-11-17", "EMPLOYEE_SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "EMPLOYEE_JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-05-01", "EMPLOYEE_SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "EMPLOYEE_JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-06-09", "EMPLOYEE_SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "EMPLOYEE_JOB": "MANAGER", "MGR": 7839, "HIREDATE": "1981-04-02", "EMPLOYEE_SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "EMPLOYEE_JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1987-04-19", "EMPLOYEE_SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "EMPLOYEE_JOB": "ANALYST", "MGR": 7566, "HIREDATE": "1981-12-03", "EMPLOYEE_SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "EMPLOYEE_JOB": "CLERK", "MGR": 7902, "HIREDATE": "1980-12-17", "EMPLOYEE_SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "EMPLOYEE_JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-20", "EMPLOYEE_SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "EMPLOYEE_JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-02-22", "EMPLOYEE_SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "EMPLOYEE_JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-28", "EMPLOYEE_SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "EMPLOYEE_JOB": "SALESMAN", "MGR": 7698, "HIREDATE": "1981-09-08", "EMPLOYEE_SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "EMPLOYEE_JOB": "CLERK", "MGR": 7788, "HIREDATE": "1987-05-23", "EMPLOYEE_SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "EMPLOYEE_JOB": "CLERK", "MGR": 7698, "HIREDATE": "1981-12-03", "EMPLOYEE_SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "EMPLOYEE_JOB": "CLERK", "MGR": 7782, "HIREDATE": "1982-01-23", "EMPLOYEE_SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  },
+
+  {
+    "group": "ALIAS",
+    "question": "53. Display employee name and department number with aliases.",
+    "query": "SELECT ENAME AS EMPLOYEE_NAME, DEPTNO AS DEPARTMENT_NUMBER FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPLOYEE_NAME": "KING", "DEPARTMENT_NUMBER": 10 },
+      { "EMPLOYEE_NAME": "BLAKE", "DEPARTMENT_NUMBER": 30 },
+      { "EMPLOYEE_NAME": "CLARK", "DEPARTMENT_NUMBER": 10 },
+      { "EMPLOYEE_NAME": "JONES", "DEPARTMENT_NUMBER": 20 },
+      { "EMPLOYEE_NAME": "SCOTT", "DEPARTMENT_NUMBER": 20 },
+      { "EMPLOYEE_NAME": "FORD", "DEPARTMENT_NUMBER": 20 },
+      { "EMPLOYEE_NAME": "SMITH", "DEPARTMENT_NUMBER": 20 },
+      { "EMPLOYEE_NAME": "ALLEN", "DEPARTMENT_NUMBER": 30 },
+      { "EMPLOYEE_NAME": "WARD", "DEPARTMENT_NUMBER": 30 },
+      { "EMPLOYEE_NAME": "MARTIN", "DEPARTMENT_NUMBER": 30 },
+      { "EMPLOYEE_NAME": "TURNER", "DEPARTMENT_NUMBER": 30 },
+      { "EMPLOYEE_NAME": "ADAMS", "DEPARTMENT_NUMBER": 20 },
+      { "EMPLOYEE_NAME": "JAMES", "DEPARTMENT_NUMBER": 30 },
+      { "EMPLOYEE_NAME": "MILLER", "DEPARTMENT_NUMBER": 10 }
+    ]
+  },
+
+  {
+    "group": "ALIAS",
+    "question": "54. Display hire date as Joining_Date.",
+    "query": "SELECT EMPNO, ENAME, JOB, MGR, HIREDATE AS JOINING_DATE, SAL, COMM, DEPTNO FROM SCOTT.EMP;",
+    "output_table": [
+      { "EMPNO": 7839, "ENAME": "KING", "JOB": "PRESIDENT", "MGR": null, "JOINING_DATE": "1981-11-17", "SAL": 5000, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7698, "ENAME": "BLAKE", "JOB": "MANAGER", "MGR": 7839, "JOINING_DATE": "1981-05-01", "SAL": 2850, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7782, "ENAME": "CLARK", "JOB": "MANAGER", "MGR": 7839, "JOINING_DATE": "1981-06-09", "SAL": 2450, "COMM": null, "DEPTNO": 10 },
+      { "EMPNO": 7566, "ENAME": "JONES", "JOB": "MANAGER", "MGR": 7839, "JOINING_DATE": "1981-04-02", "SAL": 2975, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7788, "ENAME": "SCOTT", "JOB": "ANALYST", "MGR": 7566, "JOINING_DATE": "1987-04-19", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7902, "ENAME": "FORD", "JOB": "ANALYST", "MGR": 7566, "JOINING_DATE": "1981-12-03", "SAL": 3000, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7369, "ENAME": "SMITH", "JOB": "CLERK", "MGR": 7902, "JOINING_DATE": "1980-12-17", "SAL": 800, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7499, "ENAME": "ALLEN", "JOB": "SALESMAN", "MGR": 7698, "JOINING_DATE": "1981-02-20", "SAL": 1600, "COMM": 300, "DEPTNO": 30 },
+      { "EMPNO": 7521, "ENAME": "WARD", "JOB": "SALESMAN", "MGR": 7698, "JOINING_DATE": "1981-02-22", "SAL": 1250, "COMM": 500, "DEPTNO": 30 },
+      { "EMPNO": 7654, "ENAME": "MARTIN", "JOB": "SALESMAN", "MGR": 7698, "JOINING_DATE": "1981-09-28", "SAL": 1250, "COMM": 1400, "DEPTNO": 30 },
+      { "EMPNO": 7844, "ENAME": "TURNER", "JOB": "SALESMAN", "MGR": 7698, "JOINING_DATE": "1981-09-08", "SAL": 1500, "COMM": 0, "DEPTNO": 30 },
+      { "EMPNO": 7876, "ENAME": "ADAMS", "JOB": "CLERK", "MGR": 7788, "JOINING_DATE": "1987-05-23", "SAL": 1100, "COMM": null, "DEPTNO": 20 },
+      { "EMPNO": 7900, "ENAME": "JAMES", "JOB": "CLERK", "MGR": 7698, "JOINING_DATE": "1981-12-03", "SAL": 950, "COMM": null, "DEPTNO": 30 },
+      { "EMPNO": 7934, "ENAME": "MILLER", "JOB": "CLERK", "MGR": 7782, "JOINING_DATE": "1982-01-23", "SAL": 1300, "COMM": null, "DEPTNO": 10 }
+    ]
+  }
+]

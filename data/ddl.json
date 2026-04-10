@@ -1,0 +1,448 @@
+[
+  {
+    "group": "Table Creation (1-10)",
+    "question": "1.Create a table called STUDENT with columns: SID (NUMBER) , SNAME (VARCHAR2(30)) , AGE (NUMBER) , COURSE (VARCHAR2(20))",
+    "query": "CREATE TABLE STUDENT (SID NUMBER, SNAME VARCHAR2(30), AGE NUMBER, COURSE VARCHAR2(20));",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "2. Create a table EMPLOYEE with columns: EID NUMBER , ENAME VARCHAR2(40) , SALARY NUMBER(8,2) , DEPTNO NUMBER",
+    "query": "CREATE TABLE EMPLOYEE (EID NUMBER, ENAME VARCHAR2(40), SALARY NUMBER(8,2), DEPTNO NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "3. Create a table DEPARTMENT with columns: DEPTNO NUMBER , DNAME VARCHAR2(30) , LOCATION VARCHAR2(30)",
+    "query": "CREATE TABLE DEPARTMENT (DEPTNO NUMBER, DNAME VARCHAR2(30), LOCATION VARCHAR2(30));",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "4. Create a table BOOK with columns: BOOK_ID NUMBER , TITLE VARCHAR2(50) , AUTHOR VARCHAR2(40) , PRICE NUMBER",
+    "query": "CREATE TABLE BOOK (BOOK_ID NUMBER, TITLE VARCHAR2(50), AUTHOR VARCHAR2(40), PRICE NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "5. Create a table COURSE with columns: CID NUMBER , CNAME VARCHAR2(40) , DURATION NUMBER",
+    "query": "CREATE TABLE COURSE (CID NUMBER, CNAME VARCHAR2(40), DURATION NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "6. Create a table PROJECT with columns: PID NUMBER , PNAME VARCHAR2(50) , START_DATE DATE , END_DATE DATE",
+    "query": "CREATE TABLE PROJECT (PID NUMBER, PNAME VARCHAR2(50), START_DATE DATE, END_DATE DATE);",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "7. Create a table CUSTOMER with columns: CID NUMBER , CNAME VARCHAR2(40) , CITY VARCHAR2(30) , PHONE NUMBER",
+    "query": "CREATE TABLE CUSTOMER (CID NUMBER, CNAME VARCHAR2(40), CITY VARCHAR2(30), PHONE NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "8. Create a table SALES with columns: SALE_ID NUMBER , PRODUCT_NAME VARCHAR2(50) , QUANTITY NUMBER , PRICE NUMBER",
+    "query": "CREATE TABLE SALES (SALE_ID NUMBER, PRODUCT_NAME VARCHAR2(50), QUANTITY NUMBER, PRICE NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "9. Create a table EMP_COPY from the existing EMP table (structure only)",
+    "query": "CREATE TABLE EMP_COPY AS SELECT * FROM EMP WHERE 1=0;",
+    "output": "Table created."
+  },
+  {
+    "group": "Table Creation (1-10)",
+    "question": "10. Create a table EMP_BACKUP from EMP including data",
+    "query": "CREATE TABLE EMP_BACKUP AS SELECT * FROM EMP;",
+    "output": "Table created."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "11. Add a column EMAIL VARCHAR2(50) to the STUDENT table",
+    "query": "ALTER TABLE STUDENT ADD (EMAIL VARCHAR2(50));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "12. Add a column PHONE NUMBER to the EMPLOYEE table",
+    "query": "ALTER TABLE EMPLOYEE ADD (PHONE NUMBER);",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "13. Modify the column SNAME in STUDENT table to VARCHAR2(50)",
+    "query": "ALTER TABLE STUDENT MODIFY (SNAME VARCHAR2(50));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "14. Modify the column SALARY in EMPLOYEE table to NUMBER(10,2)",
+    "query": "ALTER TABLE EMPLOYEE MODIFY (SALARY NUMBER(10,2));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "15. Add two columns CITY VARCHAR2(30) and PINCODE NUMBER to CUSTOMER table",
+    "query": "ALTER TABLE CUSTOMER ADD (CITY VARCHAR2(30), PINCODE NUMBER);",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "16. Rename the column SNAME to STUDENT_NAME in STUDENT table",
+    "query": "ALTER TABLE STUDENT RENAME COLUMN SNAME TO STUDENT_NAME;",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "17. Drop the column AGE from STUDENT table",
+    "query": "ALTER TABLE STUDENT DROP COLUMN AGE;",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "18. Set the column SALARY in EMPLOYEE table to NOT NULL",
+    "query": "ALTER TABLE EMPLOYEE MODIFY (SALARY NOT NULL);",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "19. Increase the size of column TITLE in BOOK table to VARCHAR2(100)",
+    "query": "ALTER TABLE BOOK MODIFY (TITLE VARCHAR2(100));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Alter: Adding & Modifying (11-20)",
+    "question": "20. Add a column MANAGER_ID NUMBER to EMPLOYEE table",
+    "query": "ALTER TABLE EMPLOYEE ADD (MANAGER_ID NUMBER);",
+    "output": "Table altered."
+  },
+  {
+    "group": "Drop Tables (21-25)",
+    "question": "21. Drop the table STUDENT",
+    "query": "DROP TABLE STUDENT;",
+    "output": "Table dropped."
+  },
+  {
+    "group": "Drop Tables (21-25)",
+    "question": "22. Drop the table CUSTOMER from the database",
+    "query": "DROP TABLE CUSTOMER;",
+    "output": "Table dropped."
+  },
+  {
+    "group": "Drop Tables (21-25)",
+    "question": "23. Drop the table PROJECT permanently",
+    "query": "DROP TABLE PROJECT PURGE;",
+    "output": "Table dropped."
+  },
+  {
+    "group": "Drop Tables (21-25)",
+    "question": "24. Remove the table SALES",
+    "query": "DROP TABLE SALES;",
+    "output": "Table dropped."
+  },
+  {
+    "group": "Drop Tables (21-25)",
+    "question": "25. Drop the table COURSE",
+    "query": "DROP TABLE COURSE;",
+    "output": "Table dropped."
+  },
+  {
+    "group": "Rename Tables (26-30)",
+    "question": "26. Rename the table STUDENT to STUDENTS",
+    "query": "RENAME STUDENT TO STUDENTS;",
+    "output": "Table renamed."
+  },
+  {
+    "group": "Rename Tables (26-30)",
+    "question": "27. Rename the table EMPLOYEE to EMP_MASTER",
+    "query": "RENAME EMPLOYEE TO EMP_MASTER;",
+    "output": "Table renamed."
+  },
+  {
+    "group": "Rename Tables (26-30)",
+    "question": "28. Rename the table CUSTOMER to CLIENT",
+    "query": "RENAME CUSTOMER TO CLIENT;",
+    "output": "Table renamed."
+  },
+  {
+    "group": "Rename Tables (26-30)",
+    "question": "29. Rename the table BOOK to BOOK_DETAILS",
+    "query": "RENAME BOOK TO BOOK_DETAILS;",
+    "output": "Table renamed."
+  },
+  {
+    "group": "Rename Tables (26-30)",
+    "question": "30. Rename the table PROJECT to PROJECT_INFO",
+    "query": "RENAME PROJECT TO PROJECT_INFO;",
+    "output": "Table renamed."
+  },
+  {
+    "group": "Truncate (31-35)",
+    "question": "31. Remove all records from the STUDENT table",
+    "query": "TRUNCATE TABLE STUDENT;",
+    "output": "Table truncated."
+  },
+  {
+    "group": "Truncate (31-35)",
+    "question": "32. Delete all rows from EMPLOYEE table using TRUNCATE",
+    "query": "TRUNCATE TABLE EMPLOYEE;",
+    "output": "Table truncated."
+  },
+  {
+    "group": "Truncate (31-35)",
+    "question": "33. Empty the CUSTOMER table quickly",
+    "query": "TRUNCATE TABLE CUSTOMER;",
+    "output": "Table truncated."
+  },
+  {
+    "group": "Truncate (31-35)",
+    "question": "34. Remove all data from SALES table but keep structure",
+    "query": "TRUNCATE TABLE SALES;",
+    "output": "Table truncated."
+  },
+  {
+    "group": "Truncate (31-35)",
+    "question": "35. Clear the PROJECT table",
+    "query": "TRUNCATE TABLE PROJECT;",
+    "output": "Table truncated."
+  },
+  {
+    "group": "Training Table (36-41)",
+    "question": "36. Create a table TRAINING with columns TID , TNAME , DURATION",
+    "query": "CREATE TABLE TRAINING (TID NUMBER, TNAME VARCHAR2(30), DURATION NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Training Table (36-41)",
+    "question": "37. Add column TRAINER_NAME VARCHAR2(40) to TRAINING",
+    "query": "ALTER TABLE TRAINING ADD (TRAINER_NAME VARCHAR2(40));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Training Table (36-41)",
+    "question": "38. Modify TNAME column size to VARCHAR2(60)",
+    "query": "ALTER TABLE TRAINING MODIFY (TNAME VARCHAR2(60));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Training Table (36-41)",
+    "question": "39. Rename the TRAINING table to TRAINING_PROGRAM",
+    "query": "RENAME TRAINING TO TRAINING_PROGRAM;",
+    "output": "Table renamed."
+  },
+  {
+    "group": "Training Table (36-41)",
+    "question": "40. Truncate the TRAINING_PROGRAM table",
+    "query": "TRUNCATE TABLE TRAINING_PROGRAM;",
+    "output": "Table truncated."
+  },
+  {
+    "group": "Training Table (36-41)",
+    "question": "41. Drop the TRAINING_PROGRAM table",
+    "query": "DROP TABLE TRAINING_PROGRAM;",
+    "output": "Table dropped."
+  },
+  {
+    "group": "Multi Query",
+    "question": "42. Create a table EMP_PROJECT with the following columns: EMP_ID NUMBER , PROJECT_ID NUMBER , START_DATE DATE , END_DATE DATE , ROLE VARCHAR2(30).",
+    "query": "CREATE TABLE EMP_PROJECT (EMP_ID NUMBER, PROJECT_ID NUMBER, START_DATE DATE, END_DATE DATE, ROLE VARCHAR2(30));",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "42.1 Later modify the table to increase the size of ROLE to VARCHAR2(50).",
+    "query": "ALTER TABLE EMP_PROJECT MODIFY (ROLE VARCHAR2(50));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "42.2 Add a column STATUS VARCHAR2(20).",
+    "query": "ALTER TABLE EMP_PROJECT ADD (STATUS VARCHAR2(20));",
+    "output": "Table altered."
+  },
+
+  {
+    "group": "Multi Query",
+    "question": "43. Create a table PRODUCT with columns PID NUMBER , PNAME VARCHAR2(50) , PRICE NUMBER , CATEGORY VARCHAR2(30).",
+    "query": "CREATE TABLE PRODUCT (PID NUMBER, PNAME VARCHAR2(50), PRICE NUMBER, CATEGORY VARCHAR2(30));",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "43.1 Then rename column PNAME to PRODUCT_NAME.",
+    "query": "ALTER TABLE PRODUCT RENAME COLUMN PNAME TO PRODUCT_NAME;",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "43.2 Change PRICE datatype to NUMBER(10,2).",
+    "query": "ALTER TABLE PRODUCT MODIFY (PRICE NUMBER(10,2));",
+    "output": "Table altered."
+  },
+
+  {
+    "group": "Multi Query",
+    "question": "44. Create a table ORDERS with columns ORDER_ID NUMBER , CUSTOMER_ID NUMBER , ORDER_DATE DATE , TOTAL_AMOUNT NUMBER.",
+    "query": "CREATE TABLE ORDERS (ORDER_ID NUMBER, CUSTOMER_ID NUMBER, ORDER_DATE DATE, TOTAL_AMOUNT NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "44.1 After creation: Add column STATUS VARCHAR2(20).",
+    "query": "ALTER TABLE ORDERS ADD (STATUS VARCHAR2(20));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "44.2 Drop column TOTAL_AMOUNT.",
+    "query": "ALTER TABLE ORDERS DROP COLUMN TOTAL_AMOUNT;",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "44.3 Add column TOTAL_AMOUNT NUMBER(10,2) again.",
+    "query": "ALTER TABLE ORDERS ADD (TOTAL_AMOUNT NUMBER(10,2));",
+    "output": "Table altered."
+  },
+
+  {
+    "group": "Multi Query",
+    "question": "45. Create a table EMP_TEMP from the EMP table containing only employees with salary greater than 2000.",
+    "query": "CREATE TABLE EMP_TEMP AS SELECT * FROM EMPLOYEE WHERE SALARY > 2000;",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "45.1 Then: Rename the table to EMP_HIGH_SALARY.",
+    "query": "RENAME EMP_TEMP TO EMP_HIGH_SALARY;",
+    "output": "Table renamed."
+  },
+  {
+    "group": "Multi Query",
+    "question": "45.2 Truncate the table.",
+    "query": "TRUNCATE TABLE EMP_HIGH_SALARY;",
+    "output": "Table truncated."
+  },
+  {
+    "group": "Multi Query",
+    "question": "45.3 Drop the table.",
+    "query": "DROP TABLE EMP_TEMP;",
+    "output": "Table dropped."
+  },
+
+  {
+    "group": "Multi Query",
+    "question": "46. Create a table STUDENT_RECORD with columns SID NUMBER , SNAME VARCHAR2(40) , COURSE VARCHAR2(30) , MARKS NUMBER.",
+    "query": "CREATE TABLE STUDENT_RECORD (SID NUMBER, SNAME VARCHAR2(40), COURSE VARCHAR2(30), MARKS NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "46.1 Add column GRADE CHAR(1).",
+    "query": "ALTER TABLE STUDENT_RECORD ADD (GRADE CHAR(1));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "46.2 Modify MARKS datatype to NUMBER(5,2).",
+    "query": "ALTER TABLE STUDENT_RECORD MODIFY (MARKS NUMBER(5,2));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "46.3 Rename column COURSE to COURSE_NAME.",
+    "query": "ALTER TABLE STUDENT_RECORD RENAME COLUMN COURSE TO COURSE_NAME;",
+    "output": "Table altered."
+  },
+
+  {
+    "group": "Multi Query",
+    "question": "47. Create a table EMP_ARCHIVE using the structure of the EMP table but without copying data.",
+    "query": "CREATE TABLE EMP_ARCHIVE AS SELECT * FROM EMPLOYEE WHERE 1=0;",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "47.1 Then: Add column ARCHIVE_DATE DATE.",
+    "query": "ALTER TABLE EMP_ARCHIVE ADD (ARCHIVE_DATE DATE);",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "47.2 Rename the table to EMP_HISTORY.",
+    "query": "RENAME EMP_ARCHIVE TO EMP_HISTORY;",
+    "output": "Table renamed."
+  },
+
+  {
+    "group": "Multi Query",
+    "question": "48. Create a table DEPT_BACKUP from DEPT table including all rows.",
+    "query": "CREATE TABLE DEPT_BACKUP AS SELECT * FROM DEPARTMENT;",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "48.1 Then: Drop column LOC.",
+    "query": "ALTER TABLE DEPT_BACKUP DROP COLUMN LOCATION;",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "48.2 Add column LOCATION VARCHAR2(40).",
+    "query": "ALTER TABLE DEPT_BACKUP ADD (LOCATION VARCHAR2(40));",
+    "output": "Table altered."
+  },
+
+  {
+    "group": "Multi Query",
+    "question": "49. Create a table SALES_DATA with columns SALE_ID NUMBER , PRODUCT_ID NUMBER , SALE_DATE DATE , AMOUNT NUMBER.",
+    "query": "CREATE TABLE SALES_DATA (SALE_ID NUMBER, PRODUCT_ID NUMBER, SALE_DATE DATE, AMOUNT NUMBER);",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "49.1 Add column REGION VARCHAR2(30).",
+    "query": "ALTER TABLE SALES_DATA ADD (REGION VARCHAR2(30));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "49.2 Modify AMOUNT to NUMBER(12,2).",
+    "query": "ALTER TABLE SALES_DATA MODIFY (AMOUNT NUMBER(12,2));",
+    "output": "Table altered."
+  },
+  {
+    "group": "Multi Query",
+    "question": "49.3 Rename the table to REGIONAL_SALES_DATA.",
+    "query": "RENAME SALES_DATA TO REGIONAL_SALES_DATA;",
+    "output": "Table renamed."
+  },
+
+  {
+    "group": "Multi Query",
+    "question": "50. Create a table LOG_TABLE with columns LOG_ID NUMBER , USER_NAME VARCHAR2(30) , ACTION VARCHAR2(50) , LOG_DATE DATE.",
+    "query": "CREATE TABLE LOG_TABLE (LOG_ID NUMBER, USER_NAME VARCHAR2(30), ACTION VARCHAR2(50), LOG_DATE DATE);",
+    "output": "Table created."
+  },
+  {
+    "group": "Multi Query",
+    "question": "50.1 Then: Truncate the table.",
+    "query": "TRUNCATE TABLE LOG_TABLE;",
+    "output": "Table truncated."
+  },
+  {
+    "group": "Multi Query",
+    "question": "50.2 Rename it to SYSTEM_LOG.",
+    "query": "RENAME LOG_TABLE TO SYSTEM_LOG;",
+    "output": "Table renamed."
+  },
+  {
+    "group": "Multi Query",
+    "question": "50.3 And drop it permanently.",
+    "query": "DROP TABLE SYSTEM_LOG;",
+    "output": "Table dropped."
+  }
+]

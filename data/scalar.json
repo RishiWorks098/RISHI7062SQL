@@ -1,0 +1,734 @@
+[
+  
+  { "group": "String Functions", "question": "1. Names in uppercase and lowercase.", "query": "SELECT ENAME, UPPER(ENAME) AS UPPER_NAME, LOWER(ENAME) AS LOWER_NAME FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "UPPER_NAME": "KING", "LOWER_NAME": "king" }, { "ENAME": "BLAKE", "UPPER_NAME": "BLAKE", "LOWER_NAME": "blake" },
+      { "ENAME": "CLARK", "UPPER_NAME": "CLARK", "LOWER_NAME": "clark" }, { "ENAME": "JONES", "UPPER_NAME": "JONES", "LOWER_NAME": "jones" },
+      { "ENAME": "SCOTT", "UPPER_NAME": "SCOTT", "LOWER_NAME": "scott" }, { "ENAME": "FORD", "UPPER_NAME": "FORD", "LOWER_NAME": "ford" },
+      { "ENAME": "SMITH", "UPPER_NAME": "SMITH", "LOWER_NAME": "smith" }, { "ENAME": "ALLEN", "UPPER_NAME": "ALLEN", "LOWER_NAME": "allen" },
+      { "ENAME": "WARD", "UPPER_NAME": "WARD", "LOWER_NAME": "ward" }, { "ENAME": "MARTIN", "UPPER_NAME": "MARTIN", "LOWER_NAME": "martin" },
+      { "ENAME": "TURNER", "UPPER_NAME": "TURNER", "LOWER_NAME": "turner" }, { "ENAME": "ADAMS", "UPPER_NAME": "ADAMS", "LOWER_NAME": "adams" },
+      { "ENAME": "JAMES", "UPPER_NAME": "JAMES", "LOWER_NAME": "james" }, { "ENAME": "MILLER", "UPPER_NAME": "MILLER", "LOWER_NAME": "miller" }
+  ]},
+  { "group": "String Functions", "question": "2. Employee name and its length.", "query": "SELECT ENAME, LENGTH(ENAME) AS NAME_LEN FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "NAME_LEN": 4 }, { "ENAME": "BLAKE", "NAME_LEN": 5 }, { "ENAME": "CLARK", "NAME_LEN": 5 },
+      { "ENAME": "JONES", "NAME_LEN": 5 }, { "ENAME": "SCOTT", "NAME_LEN": 5 }, { "ENAME": "FORD", "NAME_LEN": 4 },
+      { "ENAME": "SMITH", "NAME_LEN": 5 }, { "ENAME": "ALLEN", "NAME_LEN": 5 }, { "ENAME": "WARD", "NAME_LEN": 4 },
+      { "ENAME": "MARTIN", "NAME_LEN": 6 }, { "ENAME": "TURNER", "NAME_LEN": 6 }, { "ENAME": "ADAMS", "NAME_LEN": 5 },
+      { "ENAME": "JAMES", "NAME_LEN": 5 }, { "ENAME": "MILLER", "NAME_LEN": 6 }
+  ]},
+  { "group": "String Functions", "question": "3. First 4 characters using SUBSTR.", "query": "SELECT ENAME, SUBSTR(ENAME, 1, 4) AS SUB FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "SUB": "KING" }, { "ENAME": "BLAKE", "SUB": "BLAK" }, { "ENAME": "CLARK", "SUB": "CLAR" },
+      { "ENAME": "JONES", "SUB": "JONE" }, { "ENAME": "SCOTT", "SUB": "SCOT" }, { "ENAME": "FORD", "SUB": "FORD" },
+      { "ENAME": "SMITH", "SUB": "SMIT" }, { "ENAME": "ALLEN", "SUB": "ALLE" }, { "ENAME": "WARD", "SUB": "WARD" },
+      { "ENAME": "MARTIN", "SUB": "MART" }, { "ENAME": "TURNER", "SUB": "TURN" }, { "ENAME": "ADAMS", "SUB": "ADAM" },
+      { "ENAME": "JAMES", "SUB": "JAME" }, { "ENAME": "MILLER", "SUB": "MILL" }
+  ]},
+  { "group": "String Functions", "question": "4. Concatenate name and job using '-'.", "query": "SELECT ENAME || '-' || JOB AS RES FROM SCOTT.EMP;", "output_table": [
+      { "RES": "KING-PRESIDENT" }, { "RES": "BLAKE-MANAGER" }, { "RES": "CLARK-MANAGER" }, { "RES": "JONES-MANAGER" },
+      { "RES": "SCOTT-ANALYST" }, { "RES": "FORD-ANALYST" }, { "RES": "SMITH-CLERK" }, { "RES": "ALLEN-SALESMAN" },
+      { "RES": "WARD-SALESMAN" }, { "RES": "MARTIN-SALESMAN" }, { "RES": "TURNER-SALESMAN" }, { "RES": "ADAMS-CLERK" },
+      { "RES": "JAMES-CLERK" }, { "RES": "MILLER-CLERK" }
+  ]},
+  { "group": "String Functions", "question": "5. Replace 'A' with '#'.", "query": "SELECT ENAME, REPLACE(ENAME, 'A', '#') AS NEW FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "NEW": "KING" }, { "ENAME": "BLAKE", "NEW": "BL#KE" }, { "ENAME": "CLARK", "NEW": "CL#RK" },
+      { "ENAME": "JONES", "NEW": "JONES" }, { "ENAME": "SCOTT", "NEW": "SCOTT" }, { "ENAME": "FORD", "NEW": "FORD" },
+      { "ENAME": "SMITH", "NEW": "SMITH" }, { "ENAME": "ALLEN", "NEW": "#LLEN" }, { "ENAME": "WARD", "NEW": "W#RD" },
+      { "ENAME": "MARTIN", "NEW": "M#RTIN" }, { "ENAME": "TURNER", "NEW": "TURNER" }, { "ENAME": "ADAMS", "NEW": "#D#MS" },
+      { "ENAME": "JAMES", "NEW": "J#MES" }, { "ENAME": "MILLER", "NEW": "MILLER" }
+  ]},
+  { "group": "String Functions", "question": "6. Position of first 'E' (INSTR).", "query": "SELECT ENAME, INSTR(ENAME, 'E') AS POS FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "POS": 0 }, { "ENAME": "BLAKE", "POS": 5 }, { "ENAME": "JONES", "POS": 4 },
+      { "ENAME": "ALLEN", "POS": 4 }, { "ENAME": "TURNER", "POS": 5 }, { "ENAME": "JAMES", "POS": 4 },
+      { "ENAME": "MILLER", "POS": 5 }
+  ]},
+  { "group": "String Functions", "question": "7. Remove spaces using TRIM.", "query": "SELECT TRIM(ENAME) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "RES": "KING" }, { "RES": "BLAKE" }, { "RES": "CLARK" }, { "RES": "JONES" }, { "RES": "SCOTT" }, { "RES": "FORD" },
+      { "RES": "SMITH" }, { "RES": "ALLEN" }, { "RES": "WARD" }, { "RES": "MARTIN" }, { "RES": "TURNER" }, { "RES": "ADAMS" },
+      { "RES": "JAMES" }, { "RES": "MILLER" }
+  ]},
+  { "group": "String Functions", "question": "8. First letter capital (INITCAP).", "query": "SELECT INITCAP(ENAME) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "RES": "King" }, { "RES": "Blake" }, { "RES": "Clark" }, { "RES": "Jones" }, { "RES": "Scott" }, { "RES": "Ford" },
+      { "RES": "Smith" }, { "RES": "Allen" }, { "RES": "Ward" }, { "RES": "Martin" }, { "RES": "Turner" }, { "RES": "Adams" },
+      { "RES": "James" }, { "RES": "Miller" }
+  ]},
+  { "group": "String Functions", "question": "9. Last 3 characters.", "query": "SELECT ENAME, SUBSTR(ENAME, -3) AS LAST FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "LAST": "ING" }, { "ENAME": "BLAKE", "LAST": "AKE" }, { "ENAME": "CLARK", "LAST": "ARK" },
+      { "ENAME": "JONES", "LAST": "NES" }, { "ENAME": "SCOTT", "LAST": "OTT" }, { "ENAME": "FORD", "LAST": "ORD" },
+      { "ENAME": "SMITH", "LAST": "ITH" }, { "ENAME": "ALLEN", "LAST": "LEN" }, { "ENAME": "WARD", "LAST": "ARD" },
+      { "ENAME": "MARTIN", "LAST": "TIN" }, { "ENAME": "TURNER", "LAST": "NER" }, { "ENAME": "ADAMS", "LAST": "AMS" },
+      { "ENAME": "JAMES", "LAST": "MES" }, { "ENAME": "MILLER", "LAST": "LER" }
+  ]},
+  { "group": "String Functions", "question": "10. Pad with * to length 10 (LPAD).", "query": "SELECT LPAD(ENAME, 10, '*') AS RES FROM SCOTT.EMP;", "output_table": [
+      { "RES": "******KING" }, { "RES": "*****BLAKE" }, { "RES": "*****CLARK" }, { "RES": "*****JONES" },
+      { "RES": "*****SCOTT" }, { "RES": "******FORD" }, { "RES": "*****SMITH" }, { "RES": "*****ALLEN" },
+      { "RES": "******WARD" }, { "RES": "****MARTIN" }, { "RES": "****TURNER" }, { "RES": "*****ADAMS" },
+      { "RES": "*****JAMES" }, { "RES": "****MILLER" }
+  ]},
+  { "group": "String Functions", "question": "11. Internal spaces removed.", "query": "SELECT REPLACE(ENAME, ' ', '') AS RES FROM SCOTT.EMP;", "output_table": [
+      { "RES": "KING" }, { "RES": "BLAKE" }, { "RES": "CLARK" }, { "RES": "JONES" }, { "RES": "SCOTT" }, { "RES": "FORD" },
+      { "RES": "SMITH" }, { "RES": "ALLEN" }, { "RES": "WARD" }, { "RES": "MARTIN" }, { "RES": "TURNER" }, { "RES": "ADAMS" },
+      { "RES": "JAMES" }, { "RES": "MILLER" }
+  ]},
+  { "group": "String Functions", "question": "12. Starts with 'S' using function.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE SUBSTR(ENAME, 1, 1) = 'S';", "output_table": [{ "ENAME": "SMITH" }, { "ENAME": "SCOTT" }]},
+  { "group": "String Functions", "question": "13. Count excluding spaces.", "query": "SELECT ENAME, LENGTH(REPLACE(ENAME,' ','')) AS LEN FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "LEN": 4 }, { "ENAME": "BLAKE", "LEN": 5 }, { "ENAME": "CLARK", "LEN": 5 }, { "ENAME": "JONES", "LEN": 5 },
+      { "ENAME": "SCOTT", "LEN": 5 }, { "ENAME": "FORD", "LEN": 4 }, { "ENAME": "SMITH", "LEN": 5 }, { "ENAME": "ALLEN", "LEN": 5 },
+      { "ENAME": "WARD", "LEN": 4 }, { "ENAME": "MARTIN", "LEN": 6 }, { "ENAME": "TURNER", "LEN": 6 }, { "ENAME": "ADAMS", "LEN": 5 },
+      { "ENAME": "JAMES", "LEN": 5 }, { "ENAME": "MILLER", "LEN": 6 }
+  ]},
+  { "group": "String Functions", "question": "14. Reverse Name.", "query": "SELECT ENAME, REVERSE(ENAME) FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "REV": "GNIK" }, { "ENAME": "BLAKE", "REV": "EKALB" }, { "ENAME": "CLARK", "REV": "KRALC" }, { "ENAME": "JONES", "REV": "SENOJ" },
+      { "ENAME": "SCOTT", "REV": "TTOCS" }, { "ENAME": "FORD", "REV": "DROF" }, { "ENAME": "SMITH", "REV": "HTIMS" }, { "ENAME": "ALLEN", "REV": "NELLA" },
+      { "ENAME": "WARD", "REV": "DRAW" }, { "ENAME": "MARTIN", "REV": "NITRAM" }, { "ENAME": "TURNER", "REV": "RENRUT" }, { "ENAME": "ADAMS", "REV": "SMADA" },
+      { "ENAME": "JAMES", "REV": "SEMAJ" }, { "ENAME": "MILLER", "REV": "RELLIM" }
+  ]},
+  { "group": "String Functions", "question": "15. Domain from Email.", "query": "SELECT SUBSTR('j.arya@gmail.com', INSTR('j.arya@gmail.com', '@') + 1) AS DOMAIN FROM DUAL;", "output_table": [{ "DOMAIN": "gmail.com" }]},
+  { "group": "Date Functions", "question": "16. Name, hire date, and current date.", "query": "SELECT ENAME, HIREDATE, SYSDATE FROM SCOTT.EMP;", "output_table": [
+    
+  {
+    "ename": "KING",
+    "hiredate": "1981-11-17T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "BLAKE",
+    "hiredate": "1981-05-01T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "CLARK",
+    "hiredate": "1981-06-09T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "JONES",
+    "hiredate": "1981-04-02T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "SCOTT",
+    "hiredate": "1987-04-19T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "FORD",
+    "hiredate": "1981-12-03T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "SMITH",
+    "hiredate": "1980-12-17T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "ALLEN",
+    "hiredate": "1981-02-20T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "WARD",
+    "hiredate": "1981-02-22T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "MARTIN",
+    "hiredate": "1981-09-28T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "TURNER",
+    "hiredate": "1981-09-08T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "ADAMS",
+    "hiredate": "1987-05-23T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "JAMES",
+    "hiredate": "1981-12-03T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  },
+  {
+    "ename": "MILLER",
+    "hiredate": "1982-01-23T00:00:00Z",
+    "sysdate": "2026-04-10T08:13:30Z"
+  }
+  ]},
+  { "group": "Date Functions", "question": "17. Total days worked.", "query": "SELECT ENAME, ROUND(SYSDATE-HIREDATE) AS DAYS FROM SCOTT.EMP;", "output_table": [
+      
+  {
+    "ename": "KING",
+    "days": 16215
+  },
+  {
+    "ename": "BLAKE",
+    "days": 16415
+  },
+  {
+    "ename": "CLARK",
+    "days": 16376
+  },
+  {
+    "ename": "JONES",
+    "days": 16444
+  },
+  {
+    "ename": "SCOTT",
+    "days": 14236
+  },
+  {
+    "ename": "FORD",
+    "days": 16199
+  },
+  {
+    "ename": "SMITH",
+    "days": 16550
+  },
+  {
+    "ename": "ALLEN",
+    "days": 16485
+  },
+  {
+    "ename": "WARD",
+    "days": 16483
+  },
+  {
+    "ename": "MARTIN",
+    "days": 16265
+  },
+  {
+    "ename": "TURNER",
+    "days": 16285
+  },
+  {
+    "ename": "ADAMS",
+    "days": 14202
+  },
+  {
+    "ename": "JAMES",
+    "days": 16199
+  },
+  {
+    "ename": "MILLER",
+    "days": 16148
+  }
+
+  ]},
+  { "group": "Date Functions", "question": "18. Long day/month format.", "query": "SELECT ENAME, TO_CHAR(HIREDATE, 'Day, DD Month YYYY') AS RES FROM SCOTT.EMP;", "output_table": [
+      
+  {
+    "ename": "KING",
+    "res": "Tuesday  , 17 November  1981"
+  },
+  {
+    "ename": "BLAKE",
+    "res": "Friday   , 01 May       1981"
+  },
+  {
+    "ename": "CLARK",
+    "res": "Tuesday  , 09 June      1981"
+  },
+  {
+    "ename": "JONES",
+    "res": "Thursday , 02 April     1981"
+  },
+  {
+    "ename": "SCOTT",
+    "res": "Sunday   , 19 April     1987"
+  },
+  {
+    "ename": "FORD",
+    "res": "Thursday , 03 December  1981"
+  },
+  {
+    "ename": "SMITH",
+    "res": "Wednesday, 17 December  1980"
+  },
+  {
+    "ename": "ALLEN",
+    "res": "Friday   , 20 February  1981"
+  },
+  {
+    "ename": "WARD",
+    "res": "Sunday   , 22 February  1981"
+  },
+  {
+    "ename": "MARTIN",
+    "res": "Monday   , 28 September 1981"
+  },
+  {
+    "ename": "TURNER",
+    "res": "Tuesday  , 08 September 1981"
+  },
+  {
+    "ename": "ADAMS",
+    "res": "Saturday , 23 May       1987"
+  },
+  {
+    "ename": "JAMES",
+    "res": "Thursday , 03 December  1981"
+  },
+  {
+    "ename": "MILLER",
+    "res": "Saturday , 23 January   1982"
+  }
+  ]},
+  { "group": "Date Functions", "question": "19. Joined in same month as Sysdate.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE TO_CHAR(HIREDATE,'MM') = TO_CHAR(SYSDATE,'MM');", "output_table": [
+      
+  {
+    "ename": "JONES"
+  },
+  {
+    "ename": "SCOTT"
+  }
+  ]},
+  { "group": "Date Functions", "question": "20. Next Monday after hire date.", "query": "SELECT ENAME, NEXT_DAY(HIREDATE, 'MONDAY') AS RES FROM SCOTT.EMP;", "output_table": [
+     {
+    "ename": "KING",
+    "res": "1981-11-23T00:00:00Z"
+  },
+  {
+    "ename": "BLAKE",
+    "res": "1981-05-04T00:00:00Z"
+  },
+  {
+    "ename": "CLARK",
+    "res": "1981-06-15T00:00:00Z"
+  },
+  {
+    "ename": "JONES",
+    "res": "1981-04-06T00:00:00Z"
+  },
+  {
+    "ename": "SCOTT",
+    "res": "1987-04-20T00:00:00Z"
+  },
+  {
+    "ename": "FORD",
+    "res": "1981-12-07T00:00:00Z"
+  },
+  {
+    "ename": "SMITH",
+    "res": "1980-12-22T00:00:00Z"
+  },
+  {
+    "ename": "ALLEN",
+    "res": "1981-02-23T00:00:00Z"
+  },
+  {
+    "ename": "WARD",
+    "res": "1981-02-23T00:00:00Z"
+  },
+  {
+    "ename": "MARTIN",
+    "res": "1981-10-05T00:00:00Z"
+  },
+  {
+    "ename": "TURNER",
+    "res": "1981-09-14T00:00:00Z"
+  },
+  {
+    "ename": "ADAMS",
+    "res": "1987-05-25T00:00:00Z"
+  },
+  {
+    "ename": "JAMES",
+    "res": "1981-12-07T00:00:00Z"
+  },
+  {
+    "ename": "MILLER",
+    "res": "1982-01-25T00:00:00Z"
+  }
+  ]},
+  { "group": "Date Functions", "question": "21. Last day of joining month.", "query": "SELECT ENAME, LAST_DAY(HIREDATE) AS RES FROM SCOTT.EMP;", "output_table": [
+      
+  {
+    "ename": "KING",
+    "res": "1981-11-30T00:00:00Z"
+  },
+  {
+    "ename": "BLAKE",
+    "res": "1981-05-31T00:00:00Z"
+  },
+  {
+    "ename": "CLARK",
+    "res": "1981-06-30T00:00:00Z"
+  },
+  {
+    "ename": "JONES",
+    "res": "1981-04-30T00:00:00Z"
+  },
+  {
+    "ename": "SCOTT",
+    "res": "1987-04-30T00:00:00Z"
+  },
+  {
+    "ename": "FORD",
+    "res": "1981-12-31T00:00:00Z"
+  },
+  {
+    "ename": "SMITH",
+    "res": "1980-12-31T00:00:00Z"
+  },
+  {
+    "ename": "ALLEN",
+    "res": "1981-02-28T00:00:00Z"
+  },
+  {
+    "ename": "WARD",
+    "res": "1981-02-28T00:00:00Z"
+  },
+  {
+    "ename": "MARTIN",
+    "res": "1981-09-30T00:00:00Z"
+  },
+  {
+    "ename": "TURNER",
+    "res": "1981-09-30T00:00:00Z"
+  },
+  {
+    "ename": "ADAMS",
+    "res": "1987-05-31T00:00:00Z"
+  },
+  {
+    "ename": "JAMES",
+    "res": "1981-12-31T00:00:00Z"
+  },
+  {
+    "ename": "MILLER",
+    "res": "1982-01-31T00:00:00Z"
+  }
+  ]},
+  { "group": "Date Functions", "question": "22. More than 10 years experience.", "query": "SELECT ENAME FROM SCOTT.EMP WHERE (SYSDATE-HIREDATE)/365 > 10;", "output_table": [
+      { "ENAME": "KING" }, { "ENAME": "BLAKE" }, { "ENAME": "CLARK" }, { "ENAME": "JONES" }, { "ENAME": "SCOTT" }, { "ENAME": "FORD" }, { "ENAME": "SMITH" },
+      { "ENAME": "ALLEN" }, { "ENAME": "WARD" }, { "ENAME": "MARTIN" }, { "ENAME": "TURNER" }, { "ENAME": "ADAMS" }, { "ENAME": "JAMES" }, { "ENAME": "MILLER" }
+  ]},
+  { "group": "Date Functions", "question": "23. Total months worked.", "query": "SELECT ENAME, MONTHS_BETWEEN(SYSDATE, HIREDATE) AS MOS FROM SCOTT.EMP;", "output_table": [
+     {
+    "ename": "KING",
+    "mos": 532.7858979241338
+  },
+  {
+    "ename": "BLAKE",
+    "mos": 539.3020269563918
+  },
+  {
+    "ename": "CLARK",
+    "mos": 538.0439624402628
+  },
+  {
+    "ename": "JONES",
+    "mos": 540.2697688918757
+  },
+  {
+    "ename": "SCOTT",
+    "mos": 467.72138179510154
+  },
+  {
+    "ename": "FORD",
+    "mos": 532.2375108273596
+  },
+  {
+    "ename": "SMITH",
+    "mos": 543.7858979241338
+  },
+  {
+    "ename": "ALLEN",
+    "mos": 541.6891237305854
+  },
+  {
+    "ename": "WARD",
+    "mos": 541.6246076015532
+  },
+  {
+    "ename": "MARTIN",
+    "mos": 534.4310592144564
+  },
+  {
+    "ename": "TURNER",
+    "mos": 535.0762205047789
+  },
+  {
+    "ename": "ADAMS",
+    "mos": 466.592349537037
+  },
+  {
+    "ename": "JAMES",
+    "mos": 532.2375108273596
+  },
+  {
+    "ename": "MILLER",
+    "mos": 530.5923495370371
+  }
+  ]},
+  { "group": "Date Functions", "question": "24. Add 3 years 6 months.", "query": "SELECT ENAME, ADD_MONTHS(HIREDATE, 42) AS RES FROM SCOTT.EMP;", "output_table": [
+      
+  {
+    "ename": "KING",
+    "res": "1985-05-17T00:00:00Z"
+  },
+  {
+    "ename": "BLAKE",
+    "res": "1984-11-01T00:00:00Z"
+  },
+  {
+    "ename": "CLARK",
+    "res": "1984-12-09T00:00:00Z"
+  },
+  {
+    "ename": "JONES",
+    "res": "1984-10-02T00:00:00Z"
+  },
+  {
+    "ename": "SCOTT",
+    "res": "1990-10-19T00:00:00Z"
+  },
+  {
+    "ename": "FORD",
+    "res": "1985-06-03T00:00:00Z"
+  },
+  {
+    "ename": "SMITH",
+    "res": "1984-06-17T00:00:00Z"
+  },
+  {
+    "ename": "ALLEN",
+    "res": "1984-08-20T00:00:00Z"
+  },
+  {
+    "ename": "WARD",
+    "res": "1984-08-22T00:00:00Z"
+  },
+  {
+    "ename": "MARTIN",
+    "res": "1985-03-28T00:00:00Z"
+  },
+  {
+    "ename": "TURNER",
+    "res": "1985-03-08T00:00:00Z"
+  },
+  {
+    "ename": "ADAMS",
+    "res": "1990-11-23T00:00:00Z"
+  },
+  {
+    "ename": "JAMES",
+    "res": "1985-06-03T00:00:00Z"
+  },
+  {
+    "ename": "MILLER",
+    "res": "1985-07-23T00:00:00Z"
+  }
+  ]},
+  { "group": "Date Functions", "question": "25. Difference in years.", "query": "SELECT ENAME, ROUND(MONTHS_BETWEEN(SYSDATE, HIREDATE)/12) AS YRS FROM SCOTT.EMP;", "output_table": [
+      {
+    "ename": "KING",
+    "yrs": 44
+  },
+  {
+    "ename": "BLAKE",
+    "yrs": 45
+  },
+  {
+    "ename": "CLARK",
+    "yrs": 45
+  },
+  {
+    "ename": "JONES",
+    "yrs": 45
+  },
+  {
+    "ename": "SCOTT",
+    "yrs": 39
+  },
+  {
+    "ename": "FORD",
+    "yrs": 44
+  },
+  {
+    "ename": "SMITH",
+    "yrs": 45
+  },
+  {
+    "ename": "ALLEN",
+    "yrs": 45
+  },
+  {
+    "ename": "WARD",
+    "yrs": 45
+  },
+  {
+    "ename": "MARTIN",
+    "yrs": 45
+  },
+  {
+    "ename": "TURNER",
+    "yrs": 45
+  },
+  {
+    "ename": "ADAMS",
+    "yrs": 39
+  },
+  {
+    "ename": "JAMES",
+    "yrs": 44
+  },
+  {
+    "ename": "MILLER",
+    "yrs": 44
+  }
+  ]},
+
+  
+  { "group": "Numeric Functions", "question": "26. Round Sal to nearest 1000.", "query": "SELECT ENAME, ROUND(SAL, -3) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": 5000 },
+      { "ENAME": "BLAKE", "RES": 3000 },
+      { "ENAME": "CLARK", "RES": 2000 },
+      { "ENAME": "JONES", "RES": 3000 },
+      { "ENAME": "SCOTT", "RES": 3000 },
+      { "ENAME": "FORD", "RES": 3000 },
+      { "ENAME": "SMITH", "RES": 1000 },
+      { "ENAME": "ALLEN", "RES": 2000 },
+      { "ENAME": "WARD", "RES": 1000 },
+      { "ENAME": "MARTIN", "RES": 1000 },
+      { "ENAME": "TURNER", "RES": 2000 },
+      { "ENAME": "ADAMS", "RES": 1000 },
+      { "ENAME": "JAMES", "RES": 1000 },
+      { "ENAME": "MILLER", "RES": 1000 }
+  ]},
+  { "group": "Numeric Functions", "question": "27. Truncate to 2 decimals.", "query": "SELECT ENAME, TRUNC(SAL, 2) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": 5000 },
+      { "ENAME": "BLAKE", "RES": 2850 },
+      { "ENAME": "CLARK", "RES": 2450 },
+      { "ENAME": "JONES", "RES": 2975 },
+      { "ENAME": "SCOTT", "RES": 3000 },
+      { "ENAME": "FORD", "RES": 3000 },
+      { "ENAME": "SMITH", "RES": 800 },
+      { "ENAME": "ALLEN", "RES": 1600 },
+      { "ENAME": "WARD", "RES": 1250 },
+      { "ENAME": "MARTIN", "RES": 1250 },
+      { "ENAME": "TURNER", "RES": 1500 },
+      { "ENAME": "ADAMS", "RES": 1100 },
+      { "ENAME": "JAMES", "RES": 950 },
+      { "ENAME": "MILLER", "RES": 1300 }
+  ]},
+  { "group": "Numeric Functions", "question": "28. Square root of salary.", "query": "SELECT ENAME, ROUND(SQRT(SAL), 2) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": 70.71 },
+      { "ENAME": "BLAKE", "RES": 53.39 },
+      { "ENAME": "CLARK", "RES": 49.50 },
+      { "ENAME": "JONES", "RES": 54.54 },
+      { "ENAME": "SCOTT", "RES": 54.77 },
+      { "ENAME": "FORD", "RES": 54.77 },
+      { "ENAME": "SMITH", "RES": 28.28 },
+      { "ENAME": "ALLEN", "RES": 40.00 },
+      { "ENAME": "WARD", "RES": 35.36 },
+      { "ENAME": "MARTIN", "RES": 35.36 },
+      { "ENAME": "TURNER", "RES": 38.73 },
+      { "ENAME": "ADAMS", "RES": 33.17 },
+      { "ENAME": "JAMES", "RES": 30.82 },
+      { "ENAME": "MILLER", "RES": 36.06 }
+  ]},
+  { "group": "Numeric Functions", "question": "29. Absolute diff (Sal - 5000).", "query": "SELECT ENAME, ABS(SAL-5000) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": 0 },
+      { "ENAME": "BLAKE", "RES": 2150 },
+      { "ENAME": "CLARK", "RES": 2550 },
+      { "ENAME": "JONES", "RES": 2025 },
+      { "ENAME": "SCOTT", "RES": 2000 },
+      { "ENAME": "FORD", "RES": 2000 },
+      { "ENAME": "SMITH", "RES": 4200 },
+      { "ENAME": "ALLEN", "RES": 3400 },
+      { "ENAME": "WARD", "RES": 3750 },
+      { "ENAME": "MARTIN", "RES": 3750 },
+      { "ENAME": "TURNER", "RES": 3500 },
+      { "ENAME": "ADAMS", "RES": 3900 },
+      { "ENAME": "JAMES", "RES": 4050 },
+      { "ENAME": "MILLER", "RES": 3700 }
+  ]},
+  { "group": "Numeric Functions", "question": "30. Salary CEIL.", "query": "SELECT ENAME, CEIL(SAL) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": 5000 },
+      { "ENAME": "BLAKE", "RES": 2850 },
+      { "ENAME": "CLARK", "RES": 2450 },
+      { "ENAME": "JONES", "RES": 2975 },
+      { "ENAME": "SCOTT", "RES": 3000 },
+      { "ENAME": "FORD", "RES": 3000 },
+      { "ENAME": "SMITH", "RES": 800 },
+      { "ENAME": "ALLEN", "RES": 1600 },
+      { "ENAME": "WARD", "RES": 1250 },
+      { "ENAME": "MARTIN", "RES": 1250 },
+      { "ENAME": "TURNER", "RES": 1500 },
+      { "ENAME": "ADAMS", "RES": 1100 },
+      { "ENAME": "JAMES", "RES": 950 },
+      { "ENAME": "MILLER", "RES": 1300 }
+  ]},
+  { "group": "Numeric Functions", "question": "31. Salary FLOOR.", "query": "SELECT ENAME, FLOOR(SAL) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": 5000 },
+      { "ENAME": "BLAKE", "RES": 2850 },
+      { "ENAME": "CLARK", "RES": 2450 },
+      { "ENAME": "JONES", "RES": 2975 },
+      { "ENAME": "SCOTT", "RES": 3000 },
+      { "ENAME": "FORD", "RES": 3000 },
+      { "ENAME": "SMITH", "RES": 800 },
+      { "ENAME": "ALLEN", "RES": 1600 },
+      { "ENAME": "WARD", "RES": 1250 },
+      { "ENAME": "MARTIN", "RES": 1250 },
+      { "ENAME": "TURNER", "RES": 1500 },
+      { "ENAME": "ADAMS", "RES": 1100 },
+      { "ENAME": "JAMES", "RES": 950 },
+      { "ENAME": "MILLER", "RES": 1300 }
+  ]},
+  { "group": "Numeric Functions", "question": "32. Random number 1-500.", "query": "SELECT ENAME, ROUND(DBMS_RANDOM.VALUE(1,500)) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": "RANDOM" },
+      { "ENAME": "BLAKE", "RES": "RANDOM" },
+      { "ENAME": "CLARK", "RES": "RANDOM" },
+      { "ENAME": "JONES", "RES": "RANDOM" },
+      { "ENAME": "SCOTT", "RES": "RANDOM" },
+      { "ENAME": "FORD", "RES": "RANDOM" },
+      { "ENAME": "SMITH", "RES": "RANDOM" },
+      { "ENAME": "ALLEN", "RES": "RANDOM" },
+      { "ENAME": "WARD", "RES": "RANDOM" },
+      { "ENAME": "MARTIN", "RES": "RANDOM" },
+      { "ENAME": "TURNER", "RES": "RANDOM" },
+      { "ENAME": "ADAMS", "RES": "RANDOM" },
+      { "ENAME": "JAMES", "RES": "RANDOM" },
+      { "ENAME": "MILLER", "RES": "RANDOM" }
+  ]},
+  { "group": "Numeric Functions", "question": "33. Remainder (MOD Sal, 2000).", "query": "SELECT ENAME, MOD(SAL, 2000) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": 1000 },
+      { "ENAME": "BLAKE", "RES": 850 },
+      { "ENAME": "CLARK", "RES": 450 },
+      { "ENAME": "JONES", "RES": 975 },
+      { "ENAME": "SCOTT", "RES": 1000 },
+      { "ENAME": "FORD", "RES": 1000 },
+      { "ENAME": "SMITH", "RES": 800 },
+      { "ENAME": "ALLEN", "RES": 1600 },
+      { "ENAME": "WARD", "RES": 1250 },
+      { "ENAME": "MARTIN", "RES": 1250 },
+      { "ENAME": "TURNER", "RES": 1500 },
+      { "ENAME": "ADAMS", "RES": 1100 },
+      { "ENAME": "JAMES", "RES": 950 },
+      { "ENAME": "MILLER", "RES": 1300 }
+  ]},
+  { "group": "Numeric Functions", "question": "34. Salary power 3.", "query": "SELECT ENAME, POWER(SAL, 3) AS RES FROM SCOTT.EMP;", "output_table": [
+      { "ENAME": "KING", "RES": 125000000000 },
+      { "ENAME": "BLAKE", "RES": 231491625000 },
+      { "ENAME": "CLARK", "RES": 147061250000 },
+      { "ENAME": "JONES", "RES": 263322109375 },
+      { "ENAME": "SCOTT", "RES": 270000000000 },
+      { "ENAME": "FORD", "RES": 270000000000 },
+      { "ENAME": "SMITH", "RES": 512000000 },
+      { "ENAME": "ALLEN", "RES": 4096000000 },
+      { "ENAME": "WARD", "RES": 1953125000 },
+      { "ENAME": "MARTIN", "RES": 1953125000 },
+      { "ENAME": "TURNER", "RES": 3375000000 },
+      { "ENAME": "ADAMS", "RES": 1331000000 },
+      { "ENAME": "JAMES", "RES": 857375000 },
+      { "ENAME": "MILLER", "RES": 2197000000 }
+  ]},
+  { "group": "Numeric Functions", "question": "35. Round to hundred/thousand.", "query": "SELECT SAL, ROUND(SAL,-2) AS H, ROUND(SAL,-3) AS T FROM SCOTT.EMP;", "output_table": [
+      { "SAL": 2850, "H": 2900, "T": 3000 }
+  ]}
+
+  
+]
